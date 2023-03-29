@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lams Method</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1 class="general01 box01">Decode your Text With this super dupper CIA FBI decription method</h1>
+	<div class="general01">This deciphering method works by taking a plain text consisting of the characters A-Z and additionally "ÜÄÖß.,!?)(". Every character has a one on one corespondence to a square beeing devided into 9 equal squares. Exactly two of those smaller squares are collored. Since the grid consisits of 16 times 16 sqares the message cannot be longer then 256 characters. Note that spaces are deleted and there is no distinction between upper and lower case. </div>
+
+	<h4 class="general01">Input you message, do not use wierd characters and do not use more then 256 characters</h4>
+	<!-- The user input is genereted in the next line -->
+
+
+
+	<canvas class="box03" id="myCanvas" width="480" height="480" style="border: 2px solid #000; float: left;"> Your browser does not support the HTML canvas tag.</canvas>
+
+			<textarea class="general01 box02 box03" id="userInput">
+			Write some stewpid message here doesnot metter what
+		</textarea> 
+	<ul class="box03">
+		<li> <button class="general01" type="button" id="btnSubmit"> Submit </button></li>
+		<li>	<button type="button" id="btnDisplay"> Display </button></li>
+		<li> <button type="button" id="btnDownload"> Download</button> <hr></li>
+	</ul>
+		
+	<img src="" id="ImageConverted" style="float: left; border: 2px solid #00f; marging-left: 10px;">
+	<!-- Create buttons to submit and download the secrete message -->
+
+
+
+
+
+
+
+		<script>
+		// this part creates the canvas image link to the html
+
+		const btnDisplay = document.querySelector("#btnDisplay");
+		const btnDownload = document.querySelector("#btnDownload");
+		const btnSubmit =document.querySelector("#btnSubmit");
+
+		const ImageConverted = document.querySelector("#ImageConverted");
+		const myCanvas = document.getElementById("myCanvas");
+		const ctx = myCanvas.getContext("2d");
+
+
+
+
+		// No its time for the mathematical part muhahahhaha
+
+		function write_square(image, pos, loc){
+			// image is the variable of the canvas
+			// pos is an integer giving the position of the middle square to edit
+			// loc is an integer between 0 and 8 and gives the location of the small quare inside the moddle square
+
+			// this function edites a middle square in the canvas
+
+			let n = 16;
+			let x = pos % n;
+			let y = (pos-x)/n;
+
+			let a = loc % 3;
+			let b = (loc-a)/3;
+
+			image.fillRect((3*x+a)*10,(3*y+b)*10,10,10);
+		}
+
+		function decode(text,image){
+
+			let N = text.length;
+
+			if (N>256) {
+				console.log("You used more then 256 characters!")
+				return 1
+			}
+
+			image.fillStyle ="#d13e2d";
+			for (let pos = 0; pos < N; pos++) {
+  				if (text.charAt(pos) == "A") {
+  					write_square(ctx,pos,0);
+  					write_square(ctx,pos,1);
+
+				} else if (text.charAt(pos) == "B") {
+  					write_square(ctx,pos,0);
+  					write_square(ctx,pos,2);
+  				
+  				} else if (text.charAt(pos) == "C") {
+  					write_square(ctx,pos,0);
+  					write_square(ctx,pos,3);
+  				
+  				} else if (text.charAt(pos) == "D") {
+  					write_square(ctx,pos,0);
+  					write_square(ctx,pos,4);
+  				
+  				} else if (text.charAt(pos) == "E") {
+  					write_square(ctx,pos,0);
+  					write_square(ctx,pos,5);
+  				
+  				} else if (text.charAt(pos) == "F") {
+  					write_square(ctx,pos,0);
+  					write_square(ctx,pos,6);
+  				
+  				} else if (text.charAt(pos) == "G") {
+  					write_square(ctx,pos,0);
+  					write_square(ctx,pos,7);
+
+  				} else if (text.charAt(pos) == "H") {
+  					write_square(ctx,pos,0);
+  					write_square(ctx,pos,8);
+  				
+  				} else if (text.charAt(pos) == "I") {
+  					write_square(ctx,pos,1);
+  					write_square(ctx,pos,2);
+  				
+  				} else if (text.charAt(pos) == "J") {
+  					write_square(ctx,pos,1);
+  					write_square(ctx,pos,3);
+  				
+  				} else if (text.charAt(pos) == "K") {
+  					write_square(ctx,pos,1);
+  					write_square(ctx,pos,4);
+  				
+  				} else if (text.charAt(pos) == "L") {
+  					write_square(ctx,pos,1);
+  					write_square(ctx,pos,5);
+  				
+  				} else if (text.charAt(pos) == "M") {
+  					write_square(ctx,pos,1);
+  					write_square(ctx,pos,6);
+  				
+  				} else if (text.charAt(pos) == "N") {
+  					write_square(ctx,pos,1);
+  					write_square(ctx,pos,7);
+  				
+  				} else if (text.charAt(pos) == "O") {
+  					write_square(ctx,pos,1);
+  					write_square(ctx,pos,8);
+
+  				} else if (text.charAt(pos) == "P") {
+  					write_square(ctx,pos,2);
+  					write_square(ctx,pos,3);
+  				
+  				} else if (text.charAt(pos) == "Q") {
+  					write_square(ctx,pos,2);
+  					write_square(ctx,pos,4);
+  				
+  				} else if (text.charAt(pos) == "R") {
+  					write_square(ctx,pos,2);
+  					write_square(ctx,pos,5);
+  				
+  				} else if (text.charAt(pos) == "S") {
+  					write_square(ctx,pos,2);
+  					write_square(ctx,pos,6);
+  				
+  				} else if (text.charAt(pos) == "T") {
+  					write_square(ctx,pos,2);
+  					write_square(ctx,pos,7);
+  				
+  				} else if (text.charAt(pos) == "U") {
+  					write_square(ctx,pos,2);
+  					write_square(ctx,pos,8);
+  				
+  				} else if (text.charAt(pos) == "V") {
+  					write_square(ctx,pos,3);
+  					write_square(ctx,pos,4);
+  				
+  				} else if (text.charAt(pos) == "W") {
+  					write_square(ctx,pos,3);
+  					write_square(ctx,pos,5);
+  				
+  				} else if (text.charAt(pos) == "X") {
+  					write_square(ctx,pos,3);
+  					write_square(ctx,pos,6);
+  				
+  				} else if (text.charAt(pos) == "Y") {
+  					write_square(ctx,pos,3);
+  					write_square(ctx,pos,7);
+  				
+  				} else if (text.charAt(pos) == "Z") {
+  					write_square(ctx,pos,3);
+  					write_square(ctx,pos,8);
+  				
+  				} else if (text.charAt(pos) == "Ü") {
+  					write_square(ctx,pos,4);
+  					write_square(ctx,pos,5);
+  				
+  				} else if (text.charAt(pos) == "Ä") {
+  					write_square(ctx,pos,4);
+  					write_square(ctx,pos,6);
+  				
+  				} else if (text.charAt(pos) == "Ö") {
+  					write_square(ctx,pos,4);
+  					write_square(ctx,pos,7);
+  				
+  				} else if (text.charAt(pos) == "ß") {
+  					write_square(ctx,pos,4);
+  					write_square(ctx,pos,8);
+  				
+  				} else if (text.charAt(pos) == ".") {
+  					write_square(ctx,pos,5);
+  					write_square(ctx,pos,6);
+
+  				} else if (text.charAt(pos) == ",") {
+  					write_square(ctx,pos,5);
+  					write_square(ctx,pos,7);
+  				
+  				} else if (text.charAt(pos) == "!") {
+  					write_square(ctx,pos,5);
+  					write_square(ctx,pos,8);
+  				
+  				} else if (text.charAt(pos) == "?") {
+  					write_square(ctx,pos,6);
+  					write_square(ctx,pos,7);
+  				
+  				} else if (text.charAt(pos) == ")") {
+  					write_square(ctx,pos,6);
+  					write_square(ctx,pos,8);
+  				
+  				} else if (text.charAt(pos) == "(") {
+  					write_square(ctx,pos,7);
+  					write_square(ctx,pos,8);
+  				
+				} else {
+					console.log("Something Went wrong you pushed a unkown character"); // have to write some error message here !!! TODO
+				}
+			} //for loop
+		
+
+			image.fillStyle = "#111111";
+			for (let x =0; x<16; x++) {
+				image.fillRect(0,x*3*10,480,1);
+				image.fillRect(x*3*10,0,1,480);
+			}
+
+		
+
+		}// function
+
+
+		btnSubmit.addEventListener("click",function (){
+			let userInput = document.querySelector("#userInput");
+			let text = String(userInput.value);                                    // chast insput object to string
+			text = text.replace(/\s+/g, '')                                        // remove spaces
+			text = text.toUpperCase();                                             // only use upper chase characters
+			ctx.fillStyle = "#263634";
+			ctx.fillRect(0, 0, myCanvas.width, myCanvas.height);
+			ctx.fillStyle = "#111111";
+
+			decode(text,ctx);
+			console.log("Canvas has been updated !")
+		});
+
+		btnDisplay.addEventListener("click",function (){
+			const dataURI = myCanvas.toDataURL();
+			ImageConverted.src = dataURI; 
+		});
+
+		btnDownload.addEventListener("click",function (){
+			if (window.navigator.msSaveBlob){
+				window.navigator.msSaveBlob(myCanvas.msToBlob(), "canva-image.png");
+		} else {
+			const a = document.createElement("a");
+
+			document.body.appendChild(a);
+			a.href = myCanvas.toDataURL();
+			a.download  = "canva-image.png";
+			a.click();
+			document.body.removeChild(a);
+		}
+		});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.general01 {
+	border-radius: 5px;
+	padding: 10px;
+	border: 2px solid black;
+	margin: 2px;
+}
+
+.box01 {
+	background-color: red;
+}
+
+.box02 {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    height: 16em;
+    width: 16em;
+}
+
+.box03 {
+	display: inline;
+}
+
+#menu li {
+   display: inline;
+}
