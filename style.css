@@ -1,26 +1,88 @@
-.general01 {
+
+
+
+@import url('https://fonts.cdnfonts.com/css/retro-computer');
+
+@import url('https://fonts.cdnfonts.com/css/thegoodmonolith');
+
+
+/* source for the terminal look https://css-tricks.com/old-timey-terminal-styling/*/
+body {
+  background-color: black;
+  background-image: repeating-linear-gradient(black, black 1px, transparent 1px, transparent 2px), radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+  color: white;
+  font: 1em Inconsolata, monospace;
+  font-family: 'Retro Computer', sans-serif;
+  font-family: 'TheGoodMonolith', sans-serif;
+  text-shadow: 0 0 5px #C8C8C8;
+}
+
+
+  .toolbar {
+    display: flex;
+    width: 90vw; /* Set the width to 80% of the viewport width */
+    padding: 10px; 
+    margin: 10px;
+  }
+
+    button {
+    border: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: inherit ;
+    font-family: inherit;
+    text-shadow: inherit;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1.2em;
+  }
+  
+   button:hover {
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+	border: black;
 	border-radius: 5px;
-	padding: 10px;
-	border: 2px solid black;
-	margin: 2px;
+  }
+
+
+.boxstyle {
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+	border: black;
+	border-radius: 5px;
+	display: inline; width: 28%; height: 28%; border: 2px solid #000;"
+
 }
 
-.box01 {
-	background-color: red;
+.inputfield {
+  	display: inline;
+  	padding: 10px;
+  	width: 325px; /* Set the width to 80% of the viewport width */
+    /*height: 5vh; /* Set the height to 5% of the viewport height */
+   height: 225px;
+   font-size: 1em; /* Set the font size to 1.5 times the default size */
+   padding: 10px; /* Add some padding for readability */
+   margin: 10px;
+    color: inherit ;
+    font-family: inherit;
+    text-shadow: inherit;
+    background-color: transparent;
+    font-family: inherit;
 }
 
-.box02 {
-    display: inline;
-    margin-left: auto;
-    margin-right: auto;
-    height: 16em;
-    width: 16em;
+
+ ul {
+ display: inline-block;
+  list-style: none; /* Remove default bullet points */
+  margin-left: 0px;
+  padding-left: 0px;
+  position: relative;
+  top: -100px;
 }
 
-.box03 {
-	display: inline;
+li {
+	padding: 5px;
+	margin: 30px;
 }
 
-#menu li {
-   display: inline;
-}
+
