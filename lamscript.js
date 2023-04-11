@@ -1,14 +1,20 @@
 // this part creates the canvas image link to the html
 
-		const btnDisplay = document.querySelector("#btnDisplay");
 		const btnDownload = document.querySelector("#btnDownload");
 		const btnSubmit =document.querySelector("#btnSubmit");
 
-		const ImageConverted = document.querySelector("#ImageConverted");
 		const myCanvas = document.getElementById("myCanvas");
 		const ctx = myCanvas.getContext("2d");
 
-
+		// animation for the canvas to fade in
+		let opacity = 0;
+		function fadeIn() {
+		  opacity += 0.01;
+		  myCanvas.style.opacity = opacity;
+		  if (opacity < 1) {
+		    requestAnimationFrame(fadeIn);
+		  }
+		}
 
 
 		// No its time for the mathematical part muhahahhaha
@@ -204,6 +210,7 @@
 
 		btnSubmit.addEventListener("click",function (){
 			let userInput = document.querySelector("#userInput");
+			
 			let text = String(userInput.value);                                    // chast insput object to string
 			text = text.replace(/\s+/g, '')                                        // remove spaces
 			text = text.toUpperCase();                                             // only use upper chase characters
@@ -212,13 +219,23 @@
 			ctx.fillStyle = "#FFFFFF";
 
 			decode(text,ctx);
+			userInput.classList.add('fade-out');
+			console.log('Waiting...');
+			setTimeout(() => {
+  			console.log('5 seconds have passed!');
+  			// Additional code to execute after 5 seconds
+  			userInput.style.display = "none";
+
+
+			
+			myCanvas.style.display = "block";
 			console.log("Canvas has been updated !")
+			fadeIn();
+
+			}, 1000);
+
 		});
 
-		btnDisplay.addEventListener("click",function (){
-			const dataURI = myCanvas.toDataURL();
-			ImageConverted.src = dataURI; 
-		});
 
 		btnDownload.addEventListener("click",function (){
 			if (window.navigator.msSaveBlob){
@@ -233,3 +250,5 @@
 			document.body.removeChild(a);
 		}
 		});
+
+
