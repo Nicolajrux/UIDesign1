@@ -6,6 +6,12 @@
 		const myCanvas = document.getElementById("myCanvas");
 		const ctx = myCanvas.getContext("2d");
 
+		const audio = document.getElementById("audio");
+		const audioSources = ["audio/click.mp3", "audio/fart01.mp3", "audio/alphastein-nein.mp3", "audio/anime-wow-sound-effect.mp3",
+			"audio/error_CDOxCYm.mp3", "audio/fart-with-reverb.mp3","audio/katon.mp3", "audio/loading-lost-connection-green-screen-with-sound-effect-2.mp3",
+			  "audio/taddddaaaaa_1.mp3", "audio/y2mate_5gbydy1.mp3"];
+
+
 		// animation for the canvas to fade in
 		let opacity = 0;
 		function fadeIn() {
@@ -211,6 +217,12 @@
 		btnSubmit.addEventListener("click",function (){
 			let userInput = document.querySelector("#userInput");
 			
+			const randomIndex = Math.floor(Math.random() * audioSources.length);
+			const randomAudioSource = audioSources[randomIndex];
+			document.getElementById("audio-source").src = randomAudioSource;
+			audio.load();
+			audio.play();
+
 			let text = String(userInput.value);                                    // chast insput object to string
 			text = text.replace(/\s+/g, '')                                        // remove spaces
 			text = text.toUpperCase();                                             // only use upper chase characters
@@ -250,5 +262,6 @@
 			document.body.removeChild(a);
 		}
 		});
+
 
 

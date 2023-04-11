@@ -15,8 +15,8 @@ body {
   font-family: 'Retro Computer', sans-serif;
   font-family: 'TheGoodMonolith', sans-serif;
   text-shadow: 0 0 5px #C8C8C8;
-  margin-left: 50px; /* margin is 5% of the viewport width */
-  margin-right: 50px; /* margin is 5% of the viewport width */
+  margin-left: 25vw; /* margin is 5% of the viewport width */
+  margin-right: 25vw; /* margin is 5% of the viewport width */
 
 
 
