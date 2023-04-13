@@ -9,7 +9,7 @@
 		const audio = document.getElementById("audio");
 		const audioSources = ["audio/click.mp3", "audio/fart01.mp3", "audio/alphastein-nein.mp3", "audio/anime-wow-sound-effect.mp3",
 			"audio/error_CDOxCYm.mp3", "audio/fart-with-reverb.mp3","audio/katon.mp3", "audio/loading-lost-connection-green-screen-with-sound-effect-2.mp3",
-			  "audio/taddddaaaaa_1.mp3", "audio/y2mate_5gbydy1.mp3"];
+			  "audio/taddddaaaaa_1.mp3"];
 
 
 		// animation for the canvas to fade in
