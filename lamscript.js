@@ -251,13 +251,13 @@
 
 		btnDownload.addEventListener("click",function (){
 			if (window.navigator.msSaveBlob){
-				window.navigator.msSaveBlob(myCanvas.msToBlob(), "canva-image.png");
+				window.navigator.msSaveBlob(myCanvas.msToBlob(), "YeeeyImSecret.png");
 		} else {
 			const a = document.createElement("a");
 
 			document.body.appendChild(a);
 			a.href = myCanvas.toDataURL();
-			a.download  = "canva-image.png";
+			a.download  = "YeeeyImSecret.png";
 			a.click();
 			document.body.removeChild(a);
 		}
