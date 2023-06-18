@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Super SNU World</title>
+<link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+<link rel="icon" href="media/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="  user-scalable=no"> <!-- To prevent automatic scaling when taping on the input field on the phone -->
+<link rel="stylesheet" type="text/css" href="css/index.css"> <!-- inporting style sheet -->
+<script src="js/index.js"></script> <!-- External JavaScript file -->
+</head>
+
+
+
+<body>
+
+<!-- Creating background map with pinpoints of shape of mysteryboxes -->
+<div class="background-container">
+<h1 style="position: absolute; top: 50px;">Scole down and to the right !</h1>
+
+<div id="mario"></div>  <!-- Thats the little mario figure -->
+
+<!-- The id is very important dont mess that up ! -->
+<div id="pin000" class='pinbox' onclick="launchPassword(this)" style=" top: 3475px; left: 1922px;">
+  <img src="media/pinbox.gif" >
+  <div class="boxshadow pinpointshadow"></div>
+</div>
+
+
+<div id="pin001" class='pinbox' onclick="launchPassword(this)" style=" top: 2745px; left: 2223px;">
+  <img src="media/pinbox.gif" >
+  <div class="boxshadow pinpointshadow"></div>
+</div>
+
+
+<div id="pin002" class='pinbox' onclick="launchPassword(this)" style=" top: 2028px; left: 1923px;">
+  <img src="media/pinbox.gif" >
+  <div class="boxshadow pinpointshadow"></div>
+</div>
+
+
+<div id="pin003" class='pinbox' onclick="launchPassword(this)" style=" top: 2156px; left: 2130px;">
+  <img src="media/pinbox.gif" >
+  <div class="boxshadow pinpointshadow"></div>
+</div>
+
+
+<div id="pin004" class='pinbox' onclick="launchPassword(this)" style=" top: 2357px; left: 1550px;">
+  <img src="media/pinbox.gif" >
+  <div class="boxshadow pinpointshadow"></div>
+</div>
+
+<div id="pin005" class='pinbox' onclick="launchPassword(this)" style=" top: 2410px; left: 1165px;">
+  <img src="media/pinbox.gif" >
+  <div class="boxshadow pinpointshadow"></div>
+</div>
+
+<div id="pin006" class='pinbox' onclick="launchPassword(this)" style=" top: 2562px; left: 1662px;">
+  <img src="media/pinbox.gif" >
+  <div class="boxshadow pinpointshadow"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<!--
+0. Gymnasium
+1. VeganCafeteria / S-card
+2. Library
+3. StudentCenter / PostOffice
+4. StudyRoom bldg 14
+5. Dorm gym cafeteria
+6. StudyTerrace
+7. Location on the little mountain
+-->
+
+
+
+
+
+<!-- ########## Lakita cloud style ########## -->
+<div class="lakita " onmouseenter="showspeech()" onmouseleave="hidespeech()">
+  <img src="media/lakita2.png" >
+  <div class="boxshadow lakita-shadow" ></div>
+  <span id="speech" > After 300 days in Seoul, I hid my treasure within a magical bottle on GWANAKSAN. To unlock its secrets, one must solve seven riddles. The first riddle lies hidden at the 71 GYMNASIUM, and its secret is revealed by the mountain's name. Only those who conquer these challenges shall find the bottle and the precious treasure it holds.</div>
+</div>
+
+
+
+
+
+<!-- ########## Mystery box overlay for password prompt -->
+<div id="overlay" class="image-overlay hideme " >
+  <h3 style="  transform: skew(0deg,-7.3deg); position: absolute; left: 46%; top: 30%; color: white;">Magic Word</h3>
+  <button id="hide" onclick="hidePassword()" class="input-fields" style="position: absolute; left: 72%; top: 67%; width: 50px; height: 25px;">Hide</button>
+  <input id="pswinp" type="password" placeholder="Enter password" class="input-fields" style="height: 20px; width: 110px; position: absolute; top: 53%; left: 46%;">
+  <button id="pswbtn" onclick="redirect(this)" class="input-fields" style="position: absolute; top: 70%; left: 50%; width: 50px; height: 25px;">Click</button>
+  <p id="wrongpsw"  >Ah Ah Ah you didn't say the magic word <br> ALL CAPS !</p>
+<div class="boxshadow"></div>
+</div>
+
+
+<!-- Sound files -->
+<audio id="tubesound">
+  <source src="media/tube.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+<audio id="diesound">
+    <source src="media/dies.mp3" type="audio/mpeg">
+</audio>
+
+
+</body>
+</html>
+
+
+<!--
+TODO:
+° Add discription for the clound for the game
+° Gather information and create sites
+° Make styling consistent decide on one Mario style and go with it
+° recreate mario map
+° make new tab when clicking
+° individual style for each page
+° maybe change animation for the picture riddle
+° make cloud fly out of the picture when done
+° make easter eggs
+° make list of desired pinpoints
+
+-->
+
+
+<!--
+Pin points :
+- Library
+- Vegan cafeteria
+- Vollayball gym dorms
+- Volleyball gym and gym 71
+- Main building post office
+- Designing building
+- Mountain hidden bottle
+- hidden cafe
+- tube to fall into
+- change menu a little maybee
+-->
