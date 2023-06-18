@@ -1,0 +1,16 @@
+IMPORTANT: The website functions fully only when accessed through the online version at https://nicolajrux.github.io/UIDesign1/P2-PublicUtility/1-Project/index.html! It is because a JavaScript function is invoked for submitting the password and redirecting to a new subpage, which requires the availability of that specific site. This measure ensures the security of the passwords used on the website. The rest of the website would still work if accessed locally on a computer.
+
+This website is designed as a combination of a scavenger hunt and a Super Mario Bros app. The main page represents the SNU map. Upon loading the page, you'll immediately notice the Lakitu cloud from Mario. Hovering over it provides the initial instructions on how to begin the game. Afterwards, you can enter the password "GWANAKSAN" in the first mystery box located at building 71. On the subsequent page, there will be a spinning mystery box. Clicking on it reveals a picture taken at building 71. To proceed to the next location, you must physically go to building 71, locate the painting on the wall, and gather information that is only accessible from that specific viewpoint. The game continues with a total of seven stops. The final stop has a slight variation as it can only be performed on a computer. You need to navigate a small Mario figurine to a particular spot on the map—the little temple to the left of the GSES building on the mountain, at the end of the path. This action grants access to the last page where the mystery box showcases the actual location of the treasure, marking the end of the treasure hunt.
+
+
+Here are the passwords for the different locations/mysteriy boxes
+
+0. Building 71 Gymnasium : GWANAKSAN
+1. Building 101 Vegan cafeteria : ATLANTA
+2. Building 62-1 Kwanjeong Library : MEDICINE
+3. Building 60 - 63 inbetween : KIMDURYE
+4. Building 14 secret study room : NINETYONE
+5. Building 900 Dorm Gymnasium : MONET
+6. Building 82 GSES buidling : KAPPA
+7. Navigate the mario manikin which is running at the main Stadium with the arrow keys to the templesymbol at the end of the path on the mountain/ forest left to the 
+GSES building. Then a purple box should pop up and you can plug in the password : 10469

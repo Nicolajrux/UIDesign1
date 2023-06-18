@@ -1,0 +1,1 @@
+Everything the website does is decrypting a message containing 16*16 characters. I used canvas and java script to do that. You can just click on the canvas and write your message, then when you click on encode the new message is beeing shown. You can then download it as a png with the download button. 

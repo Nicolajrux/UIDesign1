@@ -1,0 +1,2 @@
+I appended the index.html here because i am using exactly that foulder to uplead to github. So when i want to reuplead something i can just uplead exactly this folder. The class indexfile is also in the Exercsie folder. For testing the behaviour it usually is fine to do it locally on the computer, but for the P2 public utility there is one function which only works for an file existing online (redirecting to a new site / checking if a specific url exists) So for checking the public utility i recoment using the upleaded version.
+

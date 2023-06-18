@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Whats in my baggg</title>
+
+  <style>
+
+
+@font-face {
+   font-family:freshfont-regular;
+   src: url(freshfont-regular.ttf);
+
+}
+
+
+body {
+      background-color: #45411e;
+      font-family: 'freshfont-regular', sans-serif;
+      color: whitesmoke;
+
+}
+
+
+#myImage {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-with-text {
+  overflow: hidden; /* clear floats */
+}
+
+.image-with-text img {
+  float: left; /* float image to the left */
+  margin-right: 10px; /* add some space between image and text */
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+  <h1>Kabangae meo direo iseoyoooo</h1>
+<video autoplay loop muted playsinline poster="legs.jpeg" id="sideslide">
+  <source src="sideslide.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<img src="legs.jpeg" style="width: 28.35%; height: 100%;">
+
+<video autoplay loop muted playsinline poster="legs.jpeg" id="sideslide">
+  <source src="upslide.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<h1> WHAT IS IN YOUR BAG NICOOOOO ?</h1>
+
+
+<div class="image-with-text">
+  <img id="myImage" src="pics/pic01.jpeg" onmouseover="changeImage()" onmouseout="changeImage()">
+
+<h1>
+I have a multong whaterbootle in my bag !
+</h1>
+<p>so that i can always drink whater</p>
+
+<h1>I have my piltong pancilcase from mongolia and my suhak gongcheck math notebook</h1>
+<p>just in case i have time to do my math homeworks</p>
+
+<h1>My jigab wallet with a picture of my chingu friends</h1>
+<p>for buying stuff usually</p>
+
+
+<h1>My charging wire</h1>
+<p>to charge my laptop</p>
+
+</div>
+
+
+
+
+<script>
+
+var imageSources = ["pics/pic01.jpeg", "pics/pic02.jpeg", "pics/pic03.jpeg", "pics/pic04.jpeg", "pics/pic05.jpeg", "pics/pic06.jpeg", "pics/pic07.jpeg", "pics/pic08.jpeg", "pics/pic09.jpeg", "pics/pic10.jpeg", "pics/pic11.jpeg", "pics/pic12.jpeg"];
+var currentIndex = 0;
+
+function changeImage() {
+  currentIndex = (currentIndex + 1) % imageSources.length;
+ var img = document.getElementById("myImage");
+  img.style.opacity = 0;
+  setTimeout(function() {
+    img.src = imageSources[currentIndex];
+    img.style.opacity = 1;
+  }, 500);
+  
+  img.classList.remove("animate__animated", "animate__heartBeat");
+  void img.offsetWidth;
+  img.classList.add("animate__animated", "animate__heartBeat");
+}
+</script>
+  
+
+</body>
+
+
+
+</html>
