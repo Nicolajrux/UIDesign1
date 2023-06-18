@@ -150,12 +150,12 @@ function checkMarioPosition(marioPosition) {
     console.log(numstr);
     var imageoverlay = document.getElementsByClassName("image-overlay")[0];
 
-    imageoverlay.style.backgroundImage  = 'url("../media/purplebox.png")';
+    imageoverlay.style.backgroundImage  = 'url("media/purplebox.png")';
     overlay.classList.remove("hideme");
   } else {
+    var overlay = document.getElementById("overlay");
     var imageoverlay = document.getElementsByClassName("image-overlay")[0];
-
-    imageoverlay.style.backgroundImage  = 'url("../media/mariobox05.png")';
+    imageoverlay.style.backgroundImage  = "url('media/mariobox05.png')";
 
   }
 
